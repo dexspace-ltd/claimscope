@@ -1,0 +1,23 @@
+[project]
+name = "claimscope-api"
+version = "0.1.0"
+description = "ClaimScope API and pipeline Lambdas"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.13.0",
+    "pydantic>=2.14.1",
+]  # boto3 is provided by the Lambda runtime
+
+[project.optional-dependencies]
+video = ["av>=14", "numpy>=2", "pillow>=11"]  # video function only
+
+[dependency-groups]
+dev = ["av>=14", "numpy>=2", "pillow>=11", 
+    "boto3",
+    "jsonschema>=4.26.0",
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

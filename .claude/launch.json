@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "claimscope-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "tools/dev/serve.py"
+      ],
+      "port": 8765
+    }
+  ]
+}

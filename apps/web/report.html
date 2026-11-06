@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="gate.css">
+  <script src="gate.js"></script>
+  <title>Schedule of Works</title>
+  <link rel="stylesheet" href="report.css">
+</head>
+<body>
+  <div class="toolbar no-print">
+    <a href="./" id="back">← Back to assessment</a>
+    <div class="mode" role="group" aria-label="Report version">
+      <button data-mode="costed" class="on">Fully costed</button>
+      <button data-mode="insurer">Insurer schedule</button>
+    </div>
+    <button id="btn-print" class="primary">Download PDF</button>
+  </div>
+
+  <div id="report"></div>
+
+  <script type="module" src="report.js"></script>
+</body>
+</html>

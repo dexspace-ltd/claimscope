@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dexspacehq.com/schemas/claimscope/schedule.json",
+  "title": "Schedule",
+  "description": "A priced schedule of works for one assessment, grouped by room. Mirrors the structure of UK insurer schedules (general items, room groups with dimensions, group totals, NET/VAT/GROSS).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["assessment_id", "catalogue_version", "rates_version", "general_items", "rooms", "totals"],
+  "$defs": {
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["length_m", "breadth_m", "height_m"],
+      "properties": {
+        "length_m": { "type": "number" },
+        "breadth_m": { "type": "number" },
+        "height_m": { "type": "number" },
+        "openings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["kind", "width_m", "height_m"],
+            "properties": {
+              "kind": { "enum": ["door", "window", "other"] },
+              "width_m": { "type": "number" },
+              "height_m": { "type": "number" }
+            }
+          }
+        },
+        "source": { "enum": ["assessor", "scan", "scan_corrected", "plan", "estimated", "video"] }
+      }
+    },
+    "derived": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["floor_area", "ceiling_area", "wall_area", "perimeter"],
+      "properties": {
+        "floor_area": { "type": "number" },
+        "ceiling_area": { "type": "number" },
+        "wall_area": { "type": "number" },
+        "perimeter": { "type": "number" }
+      }
+    },
+    "line": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["line_no", "item_code", "description", "unit", "quantity_basis", "quantity", "material_cost", "labour_cost", "total", "status", "origin"],
+      "properties": {
+        "line_no": { "type": "integer" },
+        "item_code": { "type": "string" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "unit": { "enum": ["M2", "M", "EACH", "NR", "HR", "DAY"] },
+        "quantity_basis": { "enum": ["floor_area", "ceiling_area", "wall_area", "perimeter", "count", "hours", "manual"] },
+        "quantity": { "type": "number", "minimum": 0 },
+        "material_cost": { "type": "number" },
+        "labour_cost": { "type": "number" },
+        "total": { "type": "number" },
+        "rationale": { "type": "string" },
+        "evidence_refs": { "type": "array", "items": { "type": "string" }, "description": "Evidence ids (photos, scan views, transcript segments)." },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "flags": { "type": "array", "items": { "enum": ["inspection_needed", "hidden_damage_possible", "manual_quantity", "voice_only", "low_confidence"] } },
+        "status": { "enum": ["ai_suggested", "accepted", "edited", "rejected", "assessor_added"] },
+        "origin": { "enum": ["model", "rule", "assessor"] }
+      }
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lines", "group_total"],
+      "properties": {
+        "room_id": { "type": "string" },
+        "name": { "type": "string", "examples": ["Lounge and Kitchen", "Bathroom", "Bedroom 1"] },
+        "dimensions": { "$ref": "#/$defs/dimensions" },
+        "derived": { "$ref": "#/$defs/derived" },
+        "lines": { "type": "array", "items": { "$ref": "#/$defs/line" } },
+        "group_total": { "type": "number" },
+        "special_notes": { "type": "string" },
+        "site_checks": { "type": "array", "items": { "type": "string" }, "description": "Short things to check on site, most important first." },
+        "view_count": { "type": "integer", "description": "Captured views assigned to this room." }
+      }
+    }
+  },
+  "properties": {
+    "assessment_id": { "type": "string" },
+    "catalogue_version": { "type": "string" },
+    "rates_version": { "type": "string" },
+    "general_items": { "$ref": "#/$defs/group" },
+    "rooms": { "type": "array", "items": { "$ref": "#/$defs/group" } },
+    "qa_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rule_id", "severity", "message"],
+        "properties": {
+          "rule_id": { "type": "string", "examples": ["R01"] },
+          "severity": { "enum": ["error", "warn", "info"] },
+          "message": { "type": "string" },
+          "line_refs": { "type": "array", "items": { "type": "string" } },
+          "resolved": { "type": "boolean" }
+        }
+      }
+    },
+    "totals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["net", "vat", "gross"],
+      "properties": {
+        "net": { "type": "number" },
+        "vat": { "type": "number" },
+        "gross": { "type": "number" },
+        "materials": { "type": "number" },
+        "labour": { "type": "number" }
+      }
+    }
+  }
+}

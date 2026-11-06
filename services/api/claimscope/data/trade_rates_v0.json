@@ -1,0 +1,16 @@
+{
+ "version": "v0",
+ "status": "PLACEHOLDER - client to set",
+ "currency": "GBP",
+ "per_hour": {
+  "labourer": 22,
+  "decorator": 28,
+  "plasterer": 30,
+  "joiner": 30,
+  "tiler": 30,
+  "floorer": 28,
+  "plumber": 40,
+  "electrician": 40,
+  "drying_specialist": 30
+ }
+}

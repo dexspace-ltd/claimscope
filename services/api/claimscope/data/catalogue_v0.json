@@ -1,0 +1,1774 @@
+{
+ "version": "v0",
+ "status": "PLACEHOLDER RATES - not yet curated from retailer sources (see DECISIONS.md D4)",
+ "items": [
+  {
+   "code": "FLR-001",
+   "category": "Vinyl",
+   "description": "Vinyl sheet flooring - take up and dispose",
+   "unit": "M2",
+   "operation": "take_up",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 0,
+   "labour_minutes": 8,
+   "trade": "floorer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "FLR-002",
+    "FLR-003"
+   ]
+  },
+  {
+   "code": "FLR-002",
+   "category": "Vinyl",
+   "description": "Vinyl sheet flooring - supply only",
+   "unit": "M2",
+   "operation": "supply",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 14.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 14.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-003",
+   "category": "Vinyl",
+   "description": "Vinyl sheet flooring - fit only",
+   "unit": "M2",
+   "operation": "fit",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 0,
+   "labour_minutes": 15,
+   "trade": "floorer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-010",
+   "category": "Laminate",
+   "description": "Laminate flooring - take up and dispose",
+   "unit": "M2",
+   "operation": "take_up",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 0,
+   "labour_minutes": 10,
+   "trade": "floorer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "FLR-011",
+    "FLR-012"
+   ]
+  },
+  {
+   "code": "FLR-011",
+   "category": "Laminate",
+   "description": "Laminate flooring - supply only",
+   "unit": "M2",
+   "operation": "supply",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 18.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 18.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-012",
+   "category": "Laminate",
+   "description": "Laminate flooring - fit only incl. underlay",
+   "unit": "M2",
+   "operation": "fit",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 3.0,
+   "labour_minutes": 20,
+   "trade": "floorer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 3.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-020",
+   "category": "Carpet",
+   "description": "Carpet and underlay - take up and dispose",
+   "unit": "M2",
+   "operation": "take_up",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 0,
+   "labour_minutes": 6,
+   "trade": "floorer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "FLR-021",
+    "FLR-022"
+   ]
+  },
+  {
+   "code": "FLR-021",
+   "category": "Carpet",
+   "description": "Carpet and underlay - supply only",
+   "unit": "M2",
+   "operation": "supply",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 22.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 22.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-022",
+   "category": "Carpet",
+   "description": "Carpet and underlay - fit only incl. gripper",
+   "unit": "M2",
+   "operation": "fit",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 2.5,
+   "labour_minutes": 12,
+   "trade": "floorer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 2.5,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-030",
+   "category": "Floor Tiles",
+   "description": "Floor tiles - take up and dispose",
+   "unit": "M2",
+   "operation": "take_up",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 0,
+   "labour_minutes": 30,
+   "trade": "tiler",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "FLR-031",
+    "FLR-032"
+   ]
+  },
+  {
+   "code": "FLR-031",
+   "category": "Floor Tiles",
+   "description": "Floor tiles - supply only",
+   "unit": "M2",
+   "operation": "supply",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 25.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 25.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-032",
+   "category": "Floor Tiles",
+   "description": "Floor tiles - fit only incl. adhesive and grout",
+   "unit": "M2",
+   "operation": "fit",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 8.0,
+   "labour_minutes": 60,
+   "trade": "tiler",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 8.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-040",
+   "category": "Subfloor",
+   "description": "Plywood overlay 6mm - supply and fit",
+   "unit": "M2",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 9.0,
+   "labour_minutes": 15,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 9.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-041",
+   "category": "Subfloor",
+   "description": "Self-levelling compound - apply",
+   "unit": "M2",
+   "operation": "apply",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 6.0,
+   "labour_minutes": 15,
+   "trade": "floorer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 6.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-042",
+   "category": "Subfloor",
+   "description": "Liquid damp proof membrane - apply",
+   "unit": "M2",
+   "operation": "apply",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 5.0,
+   "labour_minutes": 10,
+   "trade": "floorer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 5.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "SKT-001",
+   "category": "Skirting Board",
+   "description": "Skirting board - remove and dispose",
+   "unit": "M",
+   "operation": "remove_dispose",
+   "default_quantity_basis": "perimeter",
+   "material_rate": 0,
+   "labour_minutes": 5,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "SKT-002"
+   ]
+  },
+  {
+   "code": "SKT-002",
+   "category": "Skirting Board",
+   "description": "MDF skirting board - supply and fit",
+   "unit": "M",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "perimeter",
+   "material_rate": 6.5,
+   "labour_minutes": 15,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 6.5,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "DEC-020"
+   ]
+  },
+  {
+   "code": "PLS-001",
+   "category": "Plastering",
+   "description": "Wall plaster - hack off damaged area and dispose",
+   "unit": "M2",
+   "operation": "remove_dispose",
+   "default_quantity_basis": "manual",
+   "material_rate": 0,
+   "labour_minutes": 30,
+   "trade": "plasterer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "PLS-002"
+   ]
+  },
+  {
+   "code": "PLS-002",
+   "category": "Plastering",
+   "description": "Wall - bonding and skim to make good",
+   "unit": "M2",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "manual",
+   "material_rate": 8.0,
+   "labour_minutes": 60,
+   "trade": "plasterer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 8.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "PLS-006"
+   ]
+  },
+  {
+   "code": "PLS-003",
+   "category": "Plastering",
+   "description": "Ceiling plasterboard - take down and dispose",
+   "unit": "M2",
+   "operation": "remove_dispose",
+   "default_quantity_basis": "ceiling_area",
+   "material_rate": 0,
+   "labour_minutes": 20,
+   "trade": "plasterer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "PLS-004"
+   ]
+  },
+  {
+   "code": "PLS-004",
+   "category": "Plastering",
+   "description": "Ceiling - plasterboard and skim",
+   "unit": "M2",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "ceiling_area",
+   "material_rate": 9.0,
+   "labour_minutes": 70,
+   "trade": "plasterer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 9.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "PLS-006"
+   ]
+  },
+  {
+   "code": "PLS-005",
+   "category": "Plastering",
+   "description": "Ceiling - cut out section for inspection/drying and make good",
+   "unit": "NR",
+   "operation": "investigate",
+   "default_quantity_basis": "count",
+   "material_rate": 4.0,
+   "labour_minutes": 60,
+   "trade": "plasterer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 4.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PLS-006",
+   "category": "Decoration",
+   "description": "New plaster - mist coat",
+   "unit": "M2",
+   "operation": "apply",
+   "default_quantity_basis": "manual",
+   "material_rate": 0.6,
+   "labour_minutes": 6,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0.6,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "DEC-001",
+   "category": "Emulsion (Walls)",
+   "description": "Walls - emulsion two coats",
+   "unit": "M2",
+   "operation": "apply",
+   "default_quantity_basis": "wall_area",
+   "material_rate": 1.1,
+   "labour_minutes": 12,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 1.1,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "DEC-002",
+   "category": "Emulsion (Ceiling)",
+   "description": "Ceiling - emulsion two coats",
+   "unit": "M2",
+   "operation": "apply",
+   "default_quantity_basis": "ceiling_area",
+   "material_rate": 1.1,
+   "labour_minutes": 14,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 1.1,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "DEC-003",
+   "category": "Stain Block",
+   "description": "Ceiling - stain block one coat",
+   "unit": "M2",
+   "operation": "apply",
+   "default_quantity_basis": "ceiling_area",
+   "material_rate": 1.5,
+   "labour_minutes": 6,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 1.5,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "DEC-002"
+   ]
+  },
+  {
+   "code": "DEC-004",
+   "category": "Stain Block",
+   "description": "Walls - stain block one coat",
+   "unit": "M2",
+   "operation": "apply",
+   "default_quantity_basis": "wall_area",
+   "material_rate": 1.5,
+   "labour_minutes": 6,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 1.5,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "DEC-001"
+   ]
+  },
+  {
+   "code": "DEC-005",
+   "category": "Anti-fungal",
+   "description": "Anti-fungal wash and treatment - standard room",
+   "unit": "EACH",
+   "operation": "apply",
+   "default_quantity_basis": "count",
+   "material_rate": 25.0,
+   "labour_minutes": 90,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 25.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "per_room": true
+  },
+  {
+   "code": "DEC-006",
+   "category": "Wallpaper",
+   "description": "Wallpaper - strip and dispose",
+   "unit": "M2",
+   "operation": "remove_dispose",
+   "default_quantity_basis": "wall_area",
+   "material_rate": 0,
+   "labour_minutes": 10,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "DEC-007"
+   ]
+  },
+  {
+   "code": "DEC-007",
+   "category": "Wallpaper",
+   "description": "Lining paper - supply and hang",
+   "unit": "M2",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "wall_area",
+   "material_rate": 1.0,
+   "labour_minutes": 12,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 1.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "DEC-001"
+   ]
+  },
+  {
+   "code": "DEC-020",
+   "category": "Gloss",
+   "description": "Skirting - prepare and gloss two coats",
+   "unit": "M",
+   "operation": "apply",
+   "default_quantity_basis": "perimeter",
+   "material_rate": 0.6,
+   "labour_minutes": 6,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0.6,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "DEC-021",
+   "category": "Gloss",
+   "description": "Door and frame - prepare and paint both sides",
+   "unit": "EACH",
+   "operation": "apply",
+   "default_quantity_basis": "count",
+   "material_rate": 6.0,
+   "labour_minutes": 90,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 6.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "DEC-022",
+   "category": "Sealant",
+   "description": "Decorator's caulk to skirting",
+   "unit": "M",
+   "operation": "apply",
+   "default_quantity_basis": "perimeter",
+   "material_rate": 0.3,
+   "labour_minutes": 2,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0.3,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "JNR-001",
+   "category": "Doors",
+   "description": "Internal door - remove and dispose",
+   "unit": "EACH",
+   "operation": "remove_dispose",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 30,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "JNR-002"
+   ]
+  },
+  {
+   "code": "JNR-002",
+   "category": "Doors",
+   "description": "Internal door - supply and hang incl. ironmongery",
+   "unit": "EACH",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "count",
+   "material_rate": 85.0,
+   "labour_minutes": 120,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 85.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "DEC-021"
+   ]
+  },
+  {
+   "code": "JNR-003",
+   "category": "Doors",
+   "description": "Door lining and architrave set - supply and fit",
+   "unit": "EACH",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "count",
+   "material_rate": 35.0,
+   "labour_minutes": 90,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 35.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "JNR-004",
+   "category": "Doors",
+   "description": "Swollen door - ease and adjust",
+   "unit": "EACH",
+   "operation": "fit",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 30,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "KIT-001",
+   "category": "Kitchen",
+   "description": "Kitchen base units - remove, set aside and refit (per metre run)",
+   "unit": "M",
+   "operation": "remove_set_aside_refit",
+   "default_quantity_basis": "manual",
+   "material_rate": 0,
+   "labour_minutes": 60,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "KIT-002",
+   "category": "Kitchen",
+   "description": "Kitchen plinth - supply and fit",
+   "unit": "M",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "manual",
+   "material_rate": 12.0,
+   "labour_minutes": 15,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 12.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "KIT-003",
+   "category": "Kitchen",
+   "description": "Kitchen base unit carcass - supply and fit",
+   "unit": "EACH",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "count",
+   "material_rate": 60.0,
+   "labour_minutes": 60,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 60.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "BTH-001",
+   "category": "Bathroom",
+   "description": "WC - disconnect, set aside and refit",
+   "unit": "EACH",
+   "operation": "remove_set_aside_refit",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 90,
+   "trade": "plumber",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "BTH-002",
+   "category": "Bathroom",
+   "description": "Bath panel - supply and fit",
+   "unit": "EACH",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "count",
+   "material_rate": 30.0,
+   "labour_minutes": 30,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 30.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "BTH-003",
+   "category": "Bathroom",
+   "description": "Sanitary sealant - rake out and renew",
+   "unit": "M",
+   "operation": "apply",
+   "default_quantity_basis": "manual",
+   "material_rate": 1.5,
+   "labour_minutes": 10,
+   "trade": "plumber",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 1.5,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "BTH-004",
+   "category": "Wall Tiles",
+   "description": "Wall tiles - remove and dispose",
+   "unit": "M2",
+   "operation": "remove_dispose",
+   "default_quantity_basis": "manual",
+   "material_rate": 0,
+   "labour_minutes": 30,
+   "trade": "tiler",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "BTH-005",
+    "BTH-006"
+   ]
+  },
+  {
+   "code": "BTH-005",
+   "category": "Wall Tiles",
+   "description": "Wall tiles - supply only",
+   "unit": "M2",
+   "operation": "supply",
+   "default_quantity_basis": "manual",
+   "material_rate": 22.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 22.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "BTH-006",
+   "category": "Wall Tiles",
+   "description": "Wall tiles - fit only incl. adhesive and grout",
+   "unit": "M2",
+   "operation": "fit",
+   "default_quantity_basis": "manual",
+   "material_rate": 8.0,
+   "labour_minutes": 70,
+   "trade": "tiler",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 8.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "BTH-007",
+   "category": "Bathroom",
+   "description": "Basin or vanity unit - disconnect, set aside and refit",
+   "unit": "EACH",
+   "operation": "remove_set_aside_refit",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 90,
+   "trade": "plumber",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "ELC-001",
+   "category": "Electrical",
+   "description": "Electrical inspection and test of affected circuits",
+   "unit": "EACH",
+   "operation": "investigate",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 180,
+   "trade": "electrician",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "ELC-002",
+   "category": "Electrical",
+   "description": "Socket or switch - disconnect and refit for works",
+   "unit": "EACH",
+   "operation": "remove_set_aside_refit",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 20,
+   "trade": "electrician",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "ELC-003",
+   "category": "Electrical",
+   "description": "Water-damaged light fitting - supply and fit",
+   "unit": "EACH",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "count",
+   "material_rate": 25.0,
+   "labour_minutes": 45,
+   "trade": "electrician",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 25.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "DRY-001",
+   "category": "Drying",
+   "description": "Dehumidifier hire",
+   "unit": "DAY",
+   "operation": "supply",
+   "default_quantity_basis": "count",
+   "material_rate": 25.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 25.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "DRY-002",
+   "category": "Drying",
+   "description": "Moisture readings and drying monitoring visit",
+   "unit": "EACH",
+   "operation": "investigate",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 60,
+   "trade": "drying_specialist",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "DRY-003",
+   "category": "Strip Out",
+   "description": "Remove and dispose of water-damaged debris",
+   "unit": "HR",
+   "operation": "remove_dispose",
+   "default_quantity_basis": "hours",
+   "material_rate": 0,
+   "labour_minutes": 60,
+   "trade": "labourer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "INV-001",
+   "category": "Investigation",
+   "description": "Lift section of floor covering to inspect subfloor",
+   "unit": "NR",
+   "operation": "investigate",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 45,
+   "trade": "floorer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "INV-002",
+   "category": "Investigation",
+   "description": "Remove bath panel or boxing to inspect pipework",
+   "unit": "NR",
+   "operation": "investigate",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 30,
+   "trade": "plumber",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-001",
+   "category": "Protection",
+   "description": "Protection to floors and finishes",
+   "unit": "M2",
+   "operation": "prelim",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 1.5,
+   "labour_minutes": 3,
+   "trade": "labourer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 1.5,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-002",
+   "category": "Skips",
+   "description": "Skip hire (6 yard) incl. permit allowance",
+   "unit": "EACH",
+   "operation": "prelim",
+   "default_quantity_basis": "count",
+   "material_rate": 280.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 280.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-003",
+   "category": "Cleaning",
+   "description": "Final clean on completion - per room",
+   "unit": "EACH",
+   "operation": "prelim",
+   "default_quantity_basis": "count",
+   "material_rate": 5.0,
+   "labour_minutes": 45,
+   "trade": "labourer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 5.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "per_room": true
+  },
+  {
+   "code": "FLR-043",
+   "category": "Subfloor",
+   "description": "Concrete floor - scarify/scrabble surface and remove residues",
+   "unit": "M2",
+   "operation": "apply",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 0,
+   "labour_minutes": 20,
+   "trade": "labourer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "FLR-042"
+   ]
+  },
+  {
+   "code": "FLR-044",
+   "category": "Subfloor",
+   "description": "Latex screed - prepare concrete and lay levelling screed",
+   "unit": "M2",
+   "operation": "supply_and_fit",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 7.5,
+   "labour_minutes": 20,
+   "trade": "floorer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 7.5,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "FLR-045",
+   "category": "Plywood",
+   "description": "Plywood flooring 6mm - remove and dispose",
+   "unit": "M2",
+   "operation": "remove_dispose",
+   "default_quantity_basis": "floor_area",
+   "material_rate": 0,
+   "labour_minutes": 8,
+   "trade": "joiner",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "pairs_with": [
+    "FLR-040"
+   ]
+  },
+  {
+   "code": "DEC-008",
+   "category": "Fungicidal Wash",
+   "description": "Fungicidal wash - apply to affected areas",
+   "unit": "M2",
+   "operation": "apply",
+   "default_quantity_basis": "manual",
+   "material_rate": 0.8,
+   "labour_minutes": 4,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0.8,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "DEC-009",
+   "category": "Preparation",
+   "description": "Prepare room for decoration - take down/refit fittings, release sockets and switches",
+   "unit": "EACH",
+   "operation": "apply",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 180,
+   "trade": "decorator",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "per_room": true
+  },
+  {
+   "code": "DEC-010",
+   "category": "Sundries",
+   "description": "Decorating sundries - tape, sleeves, abrasives, filler, caulk, stain block",
+   "unit": "EACH",
+   "operation": "supply",
+   "default_quantity_basis": "count",
+   "material_rate": 45.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 45.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12",
+   "per_room": true
+  },
+  {
+   "code": "PLB-001",
+   "category": "Radiator",
+   "description": "Radiator - remove, set aside and refit",
+   "unit": "EACH",
+   "operation": "remove_set_aside_refit",
+   "default_quantity_basis": "count",
+   "material_rate": 0,
+   "labour_minutes": 60,
+   "trade": "plumber",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-004",
+   "category": "General Room Protection",
+   "description": "General sheet-up and preparation - perimeter sheet and tape to protect associated areas",
+   "unit": "EACH",
+   "operation": "prelim",
+   "default_quantity_basis": "count",
+   "material_rate": 20.0,
+   "labour_minutes": 90,
+   "trade": "labourer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 20.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-005",
+   "category": "Protection",
+   "description": "Additional room protection - unaffected rooms and access route",
+   "unit": "EACH",
+   "operation": "prelim",
+   "default_quantity_basis": "count",
+   "material_rate": 5.0,
+   "labour_minutes": 20,
+   "trade": "labourer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 5.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-006",
+   "category": "H&S Signage",
+   "description": "Health and safety signage with first aid provision",
+   "unit": "EACH",
+   "operation": "prelim",
+   "default_quantity_basis": "count",
+   "material_rate": 35.0,
+   "labour_minutes": 30,
+   "trade": "labourer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 35.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-007",
+   "category": "Black Sacks",
+   "description": "Heavy duty waste sacks",
+   "unit": "EACH",
+   "operation": "prelim",
+   "default_quantity_basis": "count",
+   "material_rate": 3.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 3.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-008",
+   "category": "Skips",
+   "description": "Skip permit application",
+   "unit": "EACH",
+   "operation": "prelim",
+   "default_quantity_basis": "count",
+   "material_rate": 60.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 60.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-009",
+   "category": "Welfare",
+   "description": "Portable serviced toilet - per week",
+   "unit": "EACH",
+   "operation": "prelim",
+   "default_quantity_basis": "count",
+   "material_rate": 65.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 65.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-010",
+   "category": "Dust Extraction",
+   "description": "Dust extraction unit - initial hire and set-up",
+   "unit": "EACH",
+   "operation": "prelim",
+   "default_quantity_basis": "count",
+   "material_rate": 70.0,
+   "labour_minutes": 30,
+   "trade": "labourer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 70.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-011",
+   "category": "Dust Extraction",
+   "description": "Dust extraction unit - each additional day",
+   "unit": "DAY",
+   "operation": "prelim",
+   "default_quantity_basis": "count",
+   "material_rate": 25.0,
+   "labour_minutes": 0,
+   "trade": "none",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 25.0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  },
+  {
+   "code": "PRL-012",
+   "category": "Labourer",
+   "description": "Labourer - strip-out support and waste handling",
+   "unit": "HR",
+   "operation": "prelim",
+   "default_quantity_basis": "hours",
+   "material_rate": 0,
+   "labour_minutes": 60,
+   "trade": "labourer",
+   "perils": [
+    "escape_of_water",
+    "flood"
+   ],
+   "sources": [
+    {
+     "retailer": "placeholder",
+     "price": 0,
+     "captured_at": "2026-10-12"
+    }
+   ],
+   "last_reviewed": "2026-10-12"
+  }
+ ]
+}

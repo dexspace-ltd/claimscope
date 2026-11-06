@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="gate.css">
+  <script src="gate.js"></script>
+  <title>ClaimScope</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try {
+      const t = localStorage.getItem("claimscope.theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    } catch {}
+  </script>
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>ClaimScope</h1>
+      <p class="muted small">Demo · anonymised data only</p>
+    </div>
+    <div class="top-actions">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Colour theme">Theme: System</button>
+      <a id="new-assessment" class="button-link" href="./" hidden>New assessment</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Start -->
+    <section id="step-create" class="card narrow">
+      <h2>New assessment</h2>
+      <form id="form-create">
+        <label>Matterport link
+          <input name="matterport_url" placeholder="Share or Discover link">
+        </label>
+        <label>Walkthrough video <span class="muted small">with spoken commentary, optional</span>
+          <input name="video" type="file" accept="video/*">
+        </label>
+        <p class="muted small form-hint">Add a 3D tour link, a phone video walking the rooms, or both.</p>
+        <label>Peril
+          <select name="peril" required>
+            <option value="escape_of_water">Escape of water</option>
+            <option value="flood">Flood</option>
+          </select>
+        </label>
+        <details class="quiet">
+          <summary>More options</summary>
+          <label>Claim reference (anonymised)
+            <input name="claim_ref" maxlength="64" placeholder="DEMO-001">
+          </label>
+          <label>Matterport SDK key
+            <input name="sdk_key" autocomplete="off" placeholder="Only on localhost or with a licence">
+          </label>
+        </details>
+        <button type="submit">Open scan</button>
+      </form>
+    </section>
+
+    <!-- Assessment -->
+    <section id="step-assessment" hidden>
+      <div class="title-row">
+        <div>
+          <h2 id="asmt-title"></h2>
+          <p id="asmt-summary" class="muted small"></p>
+        </div>
+        <span id="asmt-status" class="pill"></span>
+      </div>
+
+      <form id="form-link" class="card inline" hidden>
+        <input name="matterport_url" required placeholder="Paste a Matterport Share or Discover link">
+        <button type="submit">Add scan</button>
+      </form>
+
+      <div class="card" id="flow" hidden>
+        <ol class="steps" id="steps">
+          <li data-step="share"><span class="dot"></span>Allow capture</li>
+          <li data-step="plan"><span class="dot"></span>Rooms <em>optional</em></li>
+          <li data-step="walk"><span class="dot"></span>Walk the tour</li>
+          <li data-step="draft"><span class="dot"></span>Draft</li>
+        </ol>
+        <div class="next">
+          <div>
+            <p id="next-title" class="next-title"></p>
+            <p id="next-hint" class="muted small"></p>
+          </div>
+          <div class="next-actions">
+            <button id="btn-secondary" class="secondary" hidden></button>
+            <button id="btn-primary"></button>
+          </div>
+        </div>
+        <p id="stage-msg" class="stage small"></p>
+      </div>
+
+      <section class="card video-card" id="video-card" hidden>
+        <div class="video-head">
+          <div>
+            <p class="next-title">Walkthrough video</p>
+            <p class="muted small" id="video-text">Upload a phone video walking the rooms and saying what you see. Rooms and the incident brief are taken from your commentary.</p>
+          </div>
+          <div class="next-actions">
+            <label class="button secondary file-button">Upload video<input id="video-file" type="file" accept="video/*" hidden></label>
+            <button id="btn-video-draft" hidden>Draft schedule</button>
+          </div>
+        </div>
+        <progress id="video-progress" max="1" value="0" hidden></progress>
+      </section>
+
+      <details class="card brief" id="brief-panel">
+        <summary>
+          <span><strong>Incident brief</strong> <span class="muted small" id="brief-sub">what you know that the scan can't show</span></span>
+          <span class="pill" id="brief-status">Not added</span>
+        </summary>
+        <form id="form-brief" class="brief-form">
+          <div class="two">
+            <label>Date of incident <input name="date_of_incident" type="date"></label>
+            <label>Date damage noticed <input name="date_noticed" type="date"></label>
+          </div>
+          <label>Detail of the damage
+            <textarea name="detail" rows="2" placeholder="Which rooms or areas are affected"></textarea>
+          </label>
+          <label>Detailed cause
+            <textarea name="cause" rows="2" placeholder="e.g. leak from the WC cistern in the flat above"></textarea>
+          </label>
+          <label>Further info
+            <textarea name="further_info" rows="4" placeholder="Moisture readings, floor and wall construction, what continues behind units or under coverings, what must be replaced throughout. e.g. continuous vinyl sheet through all rooms; damp concrete subfloor needs liquid DPM; walls behind kitchen units affected"></textarea>
+          </label>
+          <div class="row-gap">
+            <button type="submit">Save brief</button>
+            <span class="muted small">Used for every room when drafting. Lines that rely on it are marked “from brief”.</span>
+          </div>
+        </form>
+      </details>
+
+      <div id="tour-wrap" class="card tour-card" hidden>
+        <div id="tour" class="tour"></div>
+      </div>
+
+      <details class="card quiet" id="rooms-panel">
+        <summary><span id="rooms-summary">Rooms</span></summary>
+        <div class="table-wrap">
+          <table id="rooms" class="plain">
+            <thead><tr><th>Room</th><th>Length m</th><th>Breadth m</th><th>Height m</th><th class="num">Floor m²</th><th class="num">Views</th><th></th></tr></thead>
+            <tbody></tbody>
+            <tfoot>
+              <tr id="new-room">
+                <td><input name="name" placeholder="Add a room" maxlength="80"></td>
+                <td><input name="length_m" type="number" step="0.01" min="0.1"></td>
+                <td><input name="breadth_m" type="number" step="0.01" min="0.1"></td>
+                <td><input name="height_m" type="number" step="0.01" min="0.1" value="2.4"></td>
+                <td colspan="2"></td>
+                <td><button id="btn-add-room" class="secondary small-btn">Add</button></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <p class="muted small">Sizes from a floor plan or the images are approximate. Edit and save to correct them before drafting.</p>
+      </details>
+
+      <details class="card quiet" id="advanced">
+        <summary>Other ways to capture</summary>
+        <div class="stack">
+          <div class="row-gap">
+            <span class="muted small">Walk rooms yourself:</span>
+            <div id="room-chips" class="chips"></div>
+            <label class="check"><input id="auto" type="checkbox" checked> keep views when I stop moving</label>
+            <button id="btn-shot" class="secondary small-btn" disabled>Capture this view</button>
+          </div>
+          <form id="form-upload" class="row-gap">
+            <span class="muted small">Upload photos:</span>
+            <select name="room_id" required></select>
+            <input name="files" type="file" accept="image/*" multiple required>
+            <button type="submit" class="secondary small-btn">Upload</button>
+          </form>
+          <div class="row-gap" id="sdk-row" hidden>
+            <span class="muted small">Matterport SDK:</span>
+            <button id="btn-sdk" class="secondary small-btn">Auto-walk with SDK</button>
+          </div>
+        </div>
+      </details>
+
+      <section id="drafting-card" class="card drafting" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <div>
+          <p class="next-title">Drafting your schedule</p>
+          <p class="muted small" id="drafting-text">This usually takes 1 to 3 minutes. The schedule appears here when it's ready.</p>
+        </div>
+      </section>
+
+      <section id="schedule-section" hidden>
+        <div class="summary card">
+          <div>
+            <p class="muted small">Draft schedule · gross</p>
+            <p id="sum-gross" class="big"></p>
+            <p id="sum-split" class="muted small"></p>
+          </div>
+          <div class="summary-stats" id="sum-stats"></div>
+          <div class="summary-actions">
+            <a id="btn-report" class="button small-btn" href="report.html" target="_blank" rel="noopener">Report PDF</a>
+            <button id="btn-download" class="secondary small-btn">Download JSON</button>
+          </div>
+        </div>
+        <p class="muted small disclaimer">AI-drafted from the scan. The assessor approves every line. Rates are placeholders until the catalogue is curated.</p>
+        <div id="qa"></div>
+        <div id="schedule"></div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Evidence viewer: click anywhere or press Esc to close -->
+  <dialog id="lightbox" aria-label="Evidence view">
+    <img id="lightbox-img" alt="Evidence view">
+    <p id="lightbox-caption" class="tiny"></p>
+  </dialog>
+
+  <!-- Docked capture panel: must stay visible on screen while walking -->
+  <aside id="dock" hidden>
+    <div class="dock-head">
+      <strong id="dock-title">Walking the tour</strong>
+      <span class="dock-buttons">
+        <button id="btn-stop-walk" class="secondary small-btn">Stop</button>
+        <button id="btn-dock-close" class="secondary small-btn" title="Hide" hidden>×</button>
+      </span>
+    </div>
+    <div class="dock-walk">
+      <div id="dock-lane" class="dock-lane"></div>
+      <progress id="dock-progress" max="1" value="0"></progress>
+      <p id="dock-status" class="muted small"></p>
+      <p class="muted tiny">Keep this tab open and in front. You can scroll and read meanwhile.</p>
+    </div>
+    <div class="dock-draft" hidden>
+      <ol class="draft-steps" id="draft-steps"></ol>
+      <p id="draft-eta" class="muted small"></p>
+      <button id="btn-view-schedule" hidden>View schedule</button>
+    </div>
+  </aside>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

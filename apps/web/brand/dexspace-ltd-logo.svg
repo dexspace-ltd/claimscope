@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 180" role="img" aria-labelledby="title desc">
+  <title id="title">Dexspace Ltd logo</title>
+  <desc id="desc">A geometric D mark with an indigo signal point and the Dexspace Ltd wordmark.</desc>
+  <g transform="translate(8 8)">
+    <rect width="164" height="164" rx="36" fill="#EEF0F4"/>
+    <path d="M46 38h39c35.35 0 64 28.65 64 64s-28.65 64-64 64H46V38Z" fill="#0D1117"/>
+    <path d="M70 62h15c22.09 0 40 17.91 40 40s-17.91 40-40 40H70V62Z" fill="#EEF0F4"/>
+    <circle cx="86" cy="102" r="10" fill="#3B47C4"/>
+  </g>
+  <g fill="#0D1117" font-family="Arial, Helvetica, sans-serif">
+    <text x="210" y="104" font-size="76" font-weight="700" letter-spacing="-3">DEXSPACE</text>
+    <circle cx="625" cy="92" r="7" fill="#3B47C4"/>
+    <text x="210" y="140" font-size="20" font-weight="700" letter-spacing="5">LTD</text>
+  </g>
+</svg>
